@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --background: #1d1414;
+  --surface: #2b1d1d;
+  --surface-soft: #342222;
+  --ink: #f6ebdc;
+  --ink-soft: #e7d6bd;
+  --ink-muted: #c8b398;
+  --gold: #c6a26a;
+  --gold-light: #d7b981;
+  --gold-deep: #a38148;
+  --border: rgba(198, 162, 106, 0.28);
+  --border-soft: rgba(198, 162, 106, 0.16);
+  --gold-gradient: linear-gradient(135deg, #d7b981 0%, #c6a26a 50%, #a38148 100%);
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-heading: 'Cormorant Garamond', Georgia, serif;
+  --font-display: 'DM Serif Display', Georgia, serif;
+  font-size: 17px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 20% 0%, rgba(198, 162, 106, 0.09), transparent 40%),
+    radial-gradient(circle at 80% 100%, rgba(163, 129, 72, 0.08), transparent 42%),
+    var(--background);
+  color: var(--ink);
+  font-family: var(--font-body);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+body.has-custom-cursor,
+body.has-custom-cursor a,
+body.has-custom-cursor button {
+  cursor: none;
+}
+
+a,
+button,
+input,
+summary {
+  -webkit-tap-highlight-color: transparent;
+}
+
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+#root {
+  min-height: 100svh;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+h1 {
+  font-size: clamp(3.4rem, 7.2vw, 5.6rem);
+}
+
+h2 {
+  font-size: clamp(2.1rem, 4.2vw, 3.4rem);
+  margin-bottom: 1.2rem;
+}
+
+h3 {
+  font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+}
+
+p {
+  color: var(--ink-muted);
+  font-size: 1.04rem;
+}
+
+button {
+  font: inherit;
+  border: 0;
+  background: none;
+}
+
+@media (max-width: 760px) {
+  :root {
+    font-size: 15.5px;
+  }
+}
