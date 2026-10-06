@@ -439,6 +439,7 @@ const CONTACT_PHONE = '+33749885452'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [counts, setCounts] = useState<number[]>(stats.map(() => 0))
   const cursorRef = useRef<HTMLDivElement | null>(null)
   const counterAnimatedRef = useRef(false)
@@ -585,7 +586,7 @@ function App() {
       <div className="custom-cursor" ref={cursorRef} aria-hidden="true"></div>
 
       <header className={`topbar ${isScrolled ? 'topbar--solid' : ''}`}>
-        <a href="#hero" className="brand" onClick={createRipple}>
+        <a href="#hero" className="brand" onClick={() => { setMobileMenuOpen(false); createRipple }}>
           <span>Feel</span> At Home
         </a>
 
@@ -600,7 +601,58 @@ function App() {
         <a href="#contact" className="btn btn--small" onClick={createRipple}>
           Estimation gratuite
         </a>
+
+        <button
+          type="button"
+          className={`hamburger ${mobileMenuOpen ? 'hamburger--open' : ''}`}
+          aria-label="Ouvrir le menu"
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((open) => !open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </header>
+
+      <div className={`mobile-menu ${mobileMenuOpen ? 'mobile-menu--open' : ''}`} aria-hidden={!mobileMenuOpen}>
+        <nav aria-label="Navigation mobile">
+          {navigationItems.map((item, i) => (
+            <a
+              key={item.href}
+              href={item.href}
+              className="mobile-menu__link"
+              style={{ transitionDelay: `${i * 60}ms` }}
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              {item.label}
+            </a>
+          ))}
+        </nav>
+        <div className="mobile-menu__actions">
+          <a
+            href="#contact"
+            className="mobile-menu__cta mobile-menu__cta--primary"
+            onClick={() => setMobileMenuOpen(false)}
+          >
+            Estimation gratuite
+          </a>
+          <a
+            href={`tel:${CONTACT_PHONE}`}
+            className="mobile-menu__cta mobile-menu__cta--secondary"
+          >
+            Appeler 07 49 88 54 52
+          </a>
+          <a
+            href={WHATSAPP_DIRECT}
+            target="_blank"
+            rel="noreferrer"
+            className="mobile-menu__cta mobile-menu__cta--tertiary"
+          >
+            Nous contacter sur WhatsApp
+          </a>
+        </div>
+      </div>
 
       <main>
         <section id="hero" className="hero-section">
