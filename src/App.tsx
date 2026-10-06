@@ -430,7 +430,12 @@ const initialForm: EstimationForm = {
 
 const propertyTypes = ['Studio', 'T2', 'T3 et plus', 'Maison'] as const
 const rythmes = ['Occasionnellement', 'Regulierement', "Toute l'annee"] as const
-const WHATSAPP_NUMBER = '33600000000'
+const WHATSAPP_NUMBER = '33749885452'
+const WHATSAPP_DIRECT = 'https://wa.me/message/77JAGQWQ3X6ZK1'
+const INSTAGRAM_URL = 'https://www.instagram.com/feelathome.fr?igsh=MTVhNHBieW05NGo2dA%3D%3D&utm_source=qr'
+const FACEBOOK_URL = 'https://www.facebook.com/share/1ADB2nYUkK/?mibextid=wwXIfr'
+const CONTACT_EMAIL = 'co.feelathome@gmail.com'
+const CONTACT_PHONE = '+33749885452'
 
 function App() {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -1062,11 +1067,14 @@ function App() {
             </p>
 
             <div className="hero-actions">
-              <a href="mailto:bonjour@feelathome.fr" className="btn btn--primary" onClick={createRipple}>
+              <a href={`mailto:${CONTACT_EMAIL}`} className="btn btn--primary" onClick={createRipple}>
                 Confier mon bien
               </a>
-              <a href="tel:+33600000000" className="btn btn--secondary" onClick={createRipple}>
+              <a href={`tel:${CONTACT_PHONE}`} className="btn btn--secondary" onClick={createRipple}>
                 Prendre rendez-vous
+              </a>
+              <a href={WHATSAPP_DIRECT} target="_blank" rel="noreferrer" className="btn btn--tertiary" onClick={createRipple}>
+                WhatsApp
               </a>
             </div>
           </div>
@@ -1313,18 +1321,18 @@ function App() {
           </div>
 
           <div className="footer-links">
-            <a href="tel:+33600000000">Telephone</a>
-            <a href="mailto:bonjour@feelathome.fr">Email</a>
-            <a href="#zones">Paris</a>
-            <a href="#zones">Poitiers</a>
+            <a href={`tel:${CONTACT_PHONE}`}>07 49 88 54 52</a>
+            <a href={`mailto:${CONTACT_EMAIL}`}>co.feelathome@gmail.com</a>
+            <a href={WHATSAPP_DIRECT} target="_blank" rel="noreferrer">WhatsApp</a>
+            <a href="#about">Qui sommes-nous</a>
           </div>
 
           <div className="footer-links">
-            <a href="https://www.instagram.com/" target="_blank" rel="noreferrer">
+            <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
               Instagram
             </a>
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
-              LinkedIn
+            <a href={FACEBOOK_URL} target="_blank" rel="noreferrer">
+              Facebook
             </a>
             <a href="#mentions-legales">Mentions legales</a>
             <a href="#confidentialite">Politique de confidentialite</a>
