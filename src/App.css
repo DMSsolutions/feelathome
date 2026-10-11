@@ -1838,12 +1838,6 @@
   transform: rotate(-1.2deg) translateY(-0.6rem);
 }
 
-.shot-card--r {
-  grid-column: span 4;
-  grid-row: span 3;
-  transform: rotate(1.3deg);
-}
-
 .founders-section {
   background:
     radial-gradient(circle at 20% 0%, rgba(215,185,129, 0.12), transparent 36%),
@@ -2358,8 +2352,7 @@
   .shot-card--d,
   .shot-card--f,
   .shot-card--g,
-  .shot-card--n,
-  .shot-card--r {
+  .shot-card--n {
     grid-column: span 4;
     grid-row: span 3;
   }
@@ -2492,8 +2485,7 @@
   .shot-card--d,
   .shot-card--f,
   .shot-card--g,
-  .shot-card--n,
-  .shot-card--r {
+  .shot-card--n {
     grid-column: span 3;
     grid-row: span 3;
   }

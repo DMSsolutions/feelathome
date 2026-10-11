@@ -246,13 +246,6 @@ const apartmentShots = [
     note: 'Draps, tete de lit, eclairage, un resultat digne d un palace.',
     tilt: -1.5,
   },
-  {
-    src: '/image/IMG_1530 (1).jpg',
-    title: 'Espace repas',
-    location: 'Appartement Poitiers',
-    note: 'Le lieu ideal pour partager de vrais moments.',
-    tilt: 2,
-  },
 ] as const
 
 const founders = [
@@ -330,7 +323,7 @@ const testimonials = [
   },
   {
     quote: 'Une equipe disponible et extremement professionnelle.',
-    author: 'Investisseur a Poitiers',
+    author: 'Investisseur a Paris',
   },
   {
     quote: "Nos voyageurs parlent regulierement de la qualite de l'accueil.",
@@ -983,13 +976,6 @@ function App() {
                   <img src={apartmentShots[16].src} alt={apartmentShots[16].title} loading="lazy" />
                 </div>
                 <span className="shot-card__tag">{apartmentShots[16].location}</span>
-              </article>
-
-              <article className="shot-card shot-card--r" data-reveal style={{ transitionDelay: '560ms' }}>
-                <div className="shot-card__media">
-                  <img src={apartmentShots[17].src} alt={apartmentShots[17].title} loading="lazy" />
-                </div>
-                <span className="shot-card__tag">{apartmentShots[17].location}</span>
               </article>
             </div>
           </div>
