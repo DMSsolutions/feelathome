@@ -130,14 +130,14 @@ const apartmentShots = [
   {
     src: '/image/IMG_1527.jpg',
     title: 'Salon lumineux',
-    location: 'Appartement Paris',
+    location: 'Appartement Mulhouse',
     note: "Lumiere naturelle et matieres nobles pour un effet 'chez soi' instantane.",
     tilt: -2,
   },
   {
     src: '/image/IMG_1528.jpg',
     title: 'Suite parentale',
-    location: 'Villa parisienne',
+    location: 'Appartement parisien',
     note: 'Linge haut de gamme, oreillers personnalises et literie premium systematique.',
     tilt: 1.5,
   },
@@ -151,7 +151,7 @@ const apartmentShots = [
   {
     src: '/image/IMG_1530.jpg',
     title: 'Espace petit dejeuner',
-    location: 'Poitiers',
+    location: 'Appartement Mulhouse',
     note: "Chaque arrivee est preparee avec les memes standards qu'un palace.",
     tilt: 2,
   },
@@ -172,77 +172,77 @@ const apartmentShots = [
   {
     src: '/image/IMG_1533.jpg',
     title: 'Chambre seconde',
-    location: 'Residence secondaire',
+    location: 'Residence Lille',
     note: 'Toutes les pieces sont soignees avec la meme exigence.',
     tilt: -2.5,
   },
   {
     src: '/image/IMG_1534.jpg',
     title: 'Detroit chambre',
-    location: 'Appartement Paris',
+    location: 'Appartement Lille',
     note: 'Finitions elegantes, tableaux, lampes, chaque detail compte.',
     tilt: 2.5,
   },
   {
     src: '/image/IMG_1592.jpg',
     title: 'Entree privee',
-    location: 'Pavillon Poitiers',
+    location: 'Pavillon Lille',
     note: "L'accueil commence des le seuil, avec une ambiance rassurante.",
     tilt: -1,
   },
   {
     src: '/image/IMG_1594.jpg',
     title: 'Salon convivial',
-    location: 'Appartement Poitiers',
+    location: 'Appartement Paris',
     note: 'Espaces penses pour se detendre comme a la maison.',
     tilt: 1.5,
   },
   {
     src: '/image/IMG_1595.jpg',
     title: 'Salle a manger',
-    location: 'Appartement Poitiers',
+    location: 'Appartement Paris',
     note: 'Parfait pour les soirees entre amis ou en famille.',
     tilt: -2,
   },
   {
-    src: '/image/IMG_1596.jpg',
+    src: '/image/SPA3.JPG',
     title: 'Salon cosy',
-    location: 'Appartement Paris',
+    location: 'Suite spa Paris',
     note: 'Tapisseries, puffs, textures chaleureuses pour l hiver comme l ete.',
     tilt: 2,
   },
   {
-    src: '/image/IMG_1597.jpg',
+    src: '/image/SPA2.JPG',
     title: 'Vue sur le salon',
-    location: 'Appartement Poitiers',
+    location: 'Suite spa Paris',
     note: 'Chaque cliche est une invitation a venir vivre ces espaces.',
     tilt: -1.5,
   },
   {
-    src: '/image/IMG_1598.jpg',
+    src: '/image/SPA.JPG',
     title: 'Salle de bain design',
-    location: 'Appartement Paris',
+    location: 'Salle de bain spa Paris',
     note: 'Robinetterie soignee, miroirs eclairages, espacement premium.',
     tilt: 1,
   },
   {
     src: '/image/IMG_1599.jpg',
     title: 'Salle de bain lumineuse',
-    location: 'Appartement Paris',
+    location: 'Suite spa Paris',
     note: 'Une bonne hygiene passe par un cadre inspire et propre.',
     tilt: -0.5,
   },
   {
     src: '/image/IMG_1600.jpg',
     title: 'Cuisine equipee premium',
-    location: 'Appartement Paris',
+    location: 'Suite spa Paris',
     note: "Ustensiles, machines, tout est pret pour l'arrivante.",
     tilt: 1,
   },
   {
     src: '/image/IMG_1601.jpg',
     title: 'Chambre elegante',
-    location: 'Appartement Poitiers',
+    location: 'Appartement Paris',
     note: 'Draps, tete de lit, eclairage, un resultat digne d un palace.',
     tilt: -1.5,
   },
@@ -1074,9 +1074,63 @@ function App() {
             </div>
 
             <div className="map-card" data-reveal>
-              <div className="map-card__marker map-card__marker--paris">
+              <svg
+                className="france-map"
+                viewBox="0 0 760 680"
+                role="img"
+                aria-label="Carte de France avec nos villes d'intervention"
+              >
+                <defs>
+                  <linearGradient id="franceFill" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stopColor="rgba(215,185,129,0.22)" />
+                    <stop offset="100%" stopColor="rgba(80,50,40,0.10)" />
+                  </linearGradient>
+                  <filter id="pinShadow" x="-50%" y="-50%" width="200%" height="200%">
+                    <feDropShadow dx="0" dy="2" stdDeviation="2" floodColor="rgba(80,50,40,0.35)" />
+                  </filter>
+                </defs>
+
+                <path
+                  className="france-map__outline"
+                  d="M 356 31 L 332 36 L 321 51 L 320 64 L 319 93 L 330 102 L 277 113 L 271 130 L 231 150 L 190 141 L 158 115 L 188 121 L 178 174 L 169 184 L 135 193 L 80 189 L 50 201 L 69 227 L 93 242 L 122 248 L 192 276 L 211 344 L 202 441 L 195 516 L 229 536 L 250 540 L 263 566 L 316 580 L 405 567 L 414 522 L 425 509 L 524 528 L 551 540 L 588 529 L 600 510 L 581 503 L 626 498 L 585 425 L 541 407 L 554 382 L 564 361 L 596 259 L 604 189 L 592 148 L 559 130 L 472 117 L 410 52 Z"
+                />
+
+                <path
+                  className="france-map__outline france-map__outline--corsica"
+                  d="M 682 567 L 684 599 L 672 640 L 666 655 L 649 617 Z"
+                />
+
+                {[
+                  { name: 'Paris', x: 355, y: 171, major: true },
+                  { name: 'Lille', x: 388, y: 57 },
+                  { name: 'Strasbourg', x: 604, y: 189 },
+                  { name: 'Lyon', x: 469, y: 370 },
+                  { name: 'Marseille', x: 494, y: 528 },
+                  { name: 'Nice', x: 581, y: 503 },
+                  { name: 'Montpellier', x: 425, y: 509 },
+                  { name: 'Toulouse', x: 313, y: 509 },
+                  { name: 'Bordeaux', x: 221, y: 429 },
+                  { name: 'Nantes', x: 176, y: 276 },
+                  { name: 'Rennes', x: 170, y: 219 },
+                ].map((city) => (
+                  <g key={city.name} className={`map-pin ${city.major ? 'map-pin--major' : ''}`}>
+                    <circle className="map-pin__pulse" cx={city.x} cy={city.y} />
+                    <circle className="map-pin__dot" cx={city.x} cy={city.y} r={city.major ? 7 : 5} filter="url(#pinShadow)" />
+                    <text
+                      className="map-pin__label"
+                      x={city.x}
+                      y={city.y - (city.major ? 14 : 12)}
+                      textAnchor="middle"
+                    >
+                      {city.name}
+                    </text>
+                  </g>
+                ))}
+              </svg>
+
+              <div className="map-card__legend">
                 <strong>France entiere</strong>
-                <span>Gestion haut de gamme & partenaires locaux</span>
+                <span>Gestion haut de gamme &amp; partenaires locaux</span>
               </div>
             </div>
           </div>
@@ -1386,8 +1440,6 @@ function App() {
             <a href={FACEBOOK_URL} target="_blank" rel="noreferrer">
               Facebook
             </a>
-            <a href="#mentions-legales">Mentions legales</a>
-            <a href="#confidentialite">Politique de confidentialite</a>
           </div>
         </div>
       </footer>
